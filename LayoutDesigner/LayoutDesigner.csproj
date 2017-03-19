@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ADA3D888-C33A-4CD8-BE2D-B6EB9714306A}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuiLabs.LayoutDesigner</RootNamespace>
+    <AssemblyName>LayoutDesigner</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>LayoutDesigner.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>GuiLabs.LayoutDesigner.DesignerApplication</SilverlightAppEntry>
+    <TestPageFileName>LayoutDesignerTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GuiLabs.PropertyGrid.Silverlight">
+      <HintPath>References\GuiLabs.PropertyGrid.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="GuiLabs.Undo.Silverlight">
+      <HintPath>References\GuiLabs.Undo.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\Actions.cs" />
+    <Compile Include="Actions\RemoveCellAction.cs" />
+    <Compile Include="Actions\DeleteEmptyRowsAndColumnsAction.cs" />
+    <Compile Include="Actions\InsertCellAction.cs" />
+    <Compile Include="Actions\RemoveRowAction.cs" />
+    <Compile Include="Actions\RemoveColumnAction.cs" />
+    <Compile Include="Actions\RemoveElementAction.cs" />
+    <Compile Include="Actions\InsertRowAction.cs" />
+    <Compile Include="Actions\InsertColumnAction.cs" />
+    <Compile Include="DragDrop\DropLocation\InsertRowGridDropLocation.cs" />
+    <Compile Include="DragDrop\DropLocation\InsertColumnGridDropLocation.cs" />
+    <Compile Include="Controls\GridControl.cs" />
+    <Compile Include="Controls\DragDropControl.cs" />
+    <Compile Include="Toolbox\Factory.cs" />
+    <Compile Include="Toolbox\ToolboxItem.cs" />
+    <Compile Include="DragDrop\DropLocation\PointSituationRelativeToRect.cs" />
+    <Compile Include="DragDrop\DropTargetCapability.cs" />
+    <Compile Include="DragDrop\DropLocation\IDropLocation.cs" />
+    <Compile Include="DragDrop\IDragSource.cs" />
+    <Compile Include="DragDrop\DragSourceCapability.cs" />
+    <Compile Include="Controls\StackPanelControl.cs" />
+    <Compile Include="DragDrop\IDropTarget.cs" />
+    <Compile Include="Panels\DragDropGrid.cs" />
+    <Compile Include="Proxies\ControlProxy.cs" />
+    <Compile Include="Proxies\ButtonProxy.cs" />
+    <Compile Include="Proxies\CheckBoxProxy.cs" />
+    <Compile Include="Proxies\ContentControlProxy.cs" />
+    <Compile Include="Proxies\ComboBoxProxy.cs" />
+    <Compile Include="Proxies\GridControlProxy.cs" />
+    <Compile Include="Proxies\StackPanelControlProxy.cs" />
+    <Compile Include="Proxies\DragDropControlProxy.cs" />
+    <Compile Include="Proxies\GridItemProxy.cs" />
+    <Compile Include="Proxies\FrameworkElementProxy.cs" />
+    <Compile Include="Proxies\TextBlockProxy.cs" />
+    <Compile Include="Proxies\RadioButtonProxy.cs" />
+    <Compile Include="Proxies\TextBoxProxy.cs" />
+    <Compile Include="Selection\ISupportSelection.cs" />
+    <Compile Include="Proxies\ProxyManager.cs" />
+    <Compile Include="Selection\SelectionManager.cs" />
+    <Compile Include="UI\Brushes.cs" />
+    <Compile Include="UI\Designer.cs" />
+    <Compile Include="UI\DesignerApplication.cs" />
+    <Compile Include="DragDrop\DropLocation\StackPanelDropLocation.cs" />
+    <Compile Include="DragDrop\DragManager.cs" />
+    <Compile Include="Controls\ContentPanel.cs" />
+    <Compile Include="Panels\DragDropPanel.cs" />
+    <Compile Include="Panels\DragDropStackPanel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\RecycleBin.cs" />
+    <Compile Include="UI\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UI.cs" />
+    <Compile Include="Xaml\IXamlWriter.cs" />
+    <Compile Include="UI\Root.cs" />
+    <Compile Include="Toolbox\Toolbox.cs" />
+    <Compile Include="Selection\SelectionCue.cs" />
+    <Compile Include="UI\Visuals.cs" />
+    <Compile Include="Xaml\XamlWriter.cs" />
+    <Compile Include="UI\XmlPane.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Control_Button.png" />
+    <Resource Include="Images\Control_Checkbox.png" />
+    <Resource Include="Images\Control_ComboBox.png" />
+    <Resource Include="Images\Control_Dropdown.png" />
+    <Resource Include="Images\Control_Grid.png" />
+    <Resource Include="Images\Control_TextBlock.png" />
+    <Resource Include="Images\Control_RadioButton.png" />
+    <Resource Include="Images\Control_StackPanel.png" />
+    <Resource Include="Images\Control_TextBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\recyclebin_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Redo32.png" />
+    <Resource Include="Images\Undo32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CopyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FullScreen32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\HelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Balloon48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RightArrow48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExitFullScreen32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

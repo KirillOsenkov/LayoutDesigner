@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="GuiLabs.LayoutDesigner.HelpWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:doc="clr-namespace:System.Windows.Documents;assembly=System.Windows"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="800">
+    <Grid 
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch">
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush
+                    StartPoint="0,0"
+                    EndPoint="1,1">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="White" Offset="0.5" />
+                    <GradientStop Color="LightYellow" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/LayoutDesigner;component/Images/Balloon48.png" 
+            Stretch="None"
+            Opacity="0.5"
+            Margin="16" />
+        <Image 
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Source="/LayoutDesigner;component/Images/RightArrow48.png" 
+            Stretch="None" 
+            Margin="16" />
+        <ScrollViewer 
+            x:Name="scrollViewer"
+            Margin="64"
+            BorderBrush="Transparent"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto">
+            <StackPanel
+                MaxWidth="{Binding ElementName=scrollViewer, Path=ViewportWidth}">
+                <TextBlock 
+                    FontFamily="Verdana, Arial" FontSize="16"
+                    TextWrapping="Wrap"
+                    LineHeight="26">
+                    <TextBlock.Inlines>
+                        <Run>
+                            This is a prototype WPF/Silverlight UI designer that was built specifically with the flow layout paradigm in mind.
+                            It does not have absolute positioning of any kind (such as setting the Margin).
+                            Instead, it guides the user to create the logical layout using containers first, in a top-down fashion.
+                        </Run>
+                        <LineBreak />
+                        <LineBreak />
+                        <Run>
+                            Drag and drop controls from the toolbar onto the surface. Start with the panels (Grid and StackPanel) and work
+                            top-down. For any control in the grid, you can drag and insert another control next to its any edge (left, top, right or bottom).
+                            You can also insert controls between any two neighbor controls in the Grid and StackPanel. Look for the blue insertion
+                            highlight that shows a possible drop point. You can rearrange existing controls in any way.
+                        </Run>
+                        <LineBreak />
+                        <LineBreak />
+                        <Run>
+                            Left-click a control to display its properties in the property grid. When a control is selected, press Delete to delete it.
+                            You can also drag the control to the Recycle Bin icon to delete it, or press the Recycle Bin when a control is selected.
+                        </Run>
+                        <LineBreak />
+                        <LineBreak />
+                        <Run>
+                            For a StackPanel, you can set its Orientation in the property grid. For any control in a grid, you can set its parent
+                            column or row to shrink to auto-fit the content size. Also you can set HorizontalAlignment and Vertical alignment on any control.
+                        </Run>
+                        <LineBreak />
+                        <LineBreak />
+                        <Run>
+                            When you're finished with the draft, press Ctrl+C or the Copy button to copy the XAML to clipboard. This should give you a good
+                            starting point. For any questions, comments or feedback, please visit</Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+                <HyperlinkButton 
+                    FontSize="16"
+                    NavigateUri="http://blogs.msdn.com/b/kirillosenkov">
+                    http://blogs.msdn.com/b/kirillosenkov
+                </HyperlinkButton>
+                <TextBlock 
+                    FontFamily="Verdana, Arial" 
+                    FontSize="16"
+                    TextWrapping="Wrap"
+                    LineHeight="26"
+                    TextAlignment="Right">
+                    Thanks! Kirill Osenkov
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutDesigner", "LayoutDesigner\LayoutDesigner.csproj", "{ADA3D888-C33A-4CD8-BE2D-B6EB9714306A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs08.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LayoutDesigner\\LayoutDesigner.csproj
+		SccProjectName1 = LayoutDesigner
+		SccLocalPath1 = LayoutDesigner
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADA3D888-C33A-4CD8-BE2D-B6EB9714306A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA3D888-C33A-4CD8-BE2D-B6EB9714306A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA3D888-C33A-4CD8-BE2D-B6EB9714306A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA3D888-C33A-4CD8-BE2D-B6EB9714306A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
