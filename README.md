@@ -4,6 +4,7 @@ A prototype Silverlight UI layout designer. Works with basic panels (StackPanel 
 Live preview in browser (requires Silverlight):
 [http://layout.osenkov.com](http://layout.osenkov.com)
 
+![Screenshot](/docs/LayoutDesigner.gif)
 ![Screenshot](/docs/screenshot.png)
 
 Originally hosted at https://layout.codeplex.com
